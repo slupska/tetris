@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="app.js" defer></script>
+    <!-- defer uruchamia grę po wczytaniu całeo html -->
+    <link rel="stylesheet" href="style.css">
+    <title>Tetris</title>
+
+    <!-- wazne!! ustawia szerokość viewportu na rzeczywistą szerokość ekranu urządzenia -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- czcionka -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+
+
+</head>
+<h1 class="page-title">Tetris</h1>
+
+<body>
+    <div class="game-wrapper">
+        <div class="main-area">
+
+            <canvas id="board"></canvas>
+            <div class="touch-controls">
+                <button class="btn-control" data-action="left">W LEWO</button>
+                <button class="btn-control" data-action="rotate">OBRÓĆ</button>
+                <button class="btn-control" data-action="right">W PRAWO</button>
+                <button class="btn-control" data-action="down">W DÓŁ</button>
+                <button class="btn-control" data-action="drop">UPUŚĆ</button>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div>
+                <h2>Wynik</h2>
+                <!-- <div class="label">Wynik</div> -->
+                <div id="score">0</div>
+                <div class="game-over" id="gameOverMsg"></div>
+            </div>
+
+            <div class="next-teromino-wrap">
+                <div class="label">Następny klocek</div>
+                <!-- czy zmienić z pixeli na zmeinną rozdzielczość ????-->
+                <canvas id="next" width="96" height="96"></canvas>
+            </div>
+
+            <button id="startBtn">Nowa gra</button>
+
+            <div class="controls">
+                <div class="label">Sterowanie</div>
+                <ul>
+                    <li><code>&larr;</code> / <code>&rarr;</code> – ruch w lewo/prawo</li>
+                    <li><code>&darr;</code> – szybszy spadek</li>
+                    <li><code>&uarr;</code> – obrót</li>
+                    <li>Spacja – twardy drop</li>
+                </ul>
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
